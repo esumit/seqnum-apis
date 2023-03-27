@@ -1,0 +1,9 @@
+=== RUN   TestGetAPI
+=== RUN   TestGetAPI/basic_test
+    seqnum_test.go:43: Received response: {"seq_num":7046040555247108096}
+=== RUN   TestGetAPI/concurrency_test
+--- PASS: TestGetAPI (0.01s)
+    --- PASS: TestGetAPI/basic_test (0.00s)
+    --- PASS: TestGetAPI/concurrency_test (0.01s)
+PASS
+ok  	github.com/esumit/seqnum-apis/seqnum_test	0.396s
