@@ -36,24 +36,28 @@ So, using 41 bits for the timestamp allows for approximately 69 years of unique 
 Reference - https://en.wikipedia.org/wiki/Snowflake_ID
 #### How tests works ?
 
-Basic Test: Validates that the service is running and able to generate sequence numbers.
-Concurrency Test: This test sends multiple concurrent GET requests to the service and 
+- Basic Test: Validates that the service is running and able to generate sequence numbers.
+- Concurrency Test: This test sends multiple concurrent GET requests to the service and 
 checks for any duplicate sequence numbers in the responses.
 
 
 #### How To ? ( with make )
+```
 git clone ...
 make clean
 make build 
 make run
 ./seqnum_get.sh
-
+```
 #### How To ? ( with docker )
+```
  git clone ..
  make docker 
  docker-compose up -d
  ./seqnum_get.sh
-
+```
 #### Help : refer build-logs 
+```
 seqnum-build-logs.txt
+```
 
