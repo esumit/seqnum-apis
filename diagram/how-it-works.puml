@@ -1,0 +1,24 @@
+@startuml
+start
+
+:Initialize timestamp (41 bits) and counter (22 bits);
+:Initialize mutex for thread-safety;
+
+repeat
+    :Lock mutex;
+    :Get current timestamp;
+
+    if (current timestamp == last request timestamp) then (yes)
+        :Increment counter;
+    else (no)
+        :Reset counter;
+        :Update timestamp;
+    endif
+
+    :Generate unique sequence number by combining timestamp and counter;
+    :Unlock mutex;
+    :Return unique sequence number;
+repeat while (Sequence number generation is required)
+
+stop
+@enduml

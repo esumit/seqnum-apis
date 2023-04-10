@@ -5,6 +5,8 @@ The Seqnum Service is a microservice that generates unique sequence numbers.
 
 #### How conceptually it works ?
 
+![How it works](/images/how-it-works-flow.png)
+
 It generates unique sequence numbers based on a combination of timestamp and counter values. 
 
 It uses 41 bits for the timestamp, allowing for 69 years of unique IDs, and 22 bits for the counter. 
